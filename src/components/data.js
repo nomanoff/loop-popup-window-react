@@ -1,3 +1,4 @@
+import React from "react";
 import BoxOne from "./BoxOne";
 import BoxTwo from "./BoxTwo";
 

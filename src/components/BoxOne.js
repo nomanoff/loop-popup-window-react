@@ -24,8 +24,8 @@ export default function BoxOne({ containerWidth }) {
         bottomLeft: false,
         topLeft: false,
       }}
-      minHeight="550px"
-      maxHeight="550px"
+      minHeight="540px"
+      maxHeight="540px"
       minWidth="100"
       maxWidth="250"
       onResizeStop={(e, direction, ref, d) => {
