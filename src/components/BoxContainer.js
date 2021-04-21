@@ -8,16 +8,16 @@ const StyledBoxContainer = styled.div`
   width: 100%;
   margin-top: 14px;
   height: 560px;
-  border: 2px solid lightcoral;
   border-radius: 3px;
   display: flex;
+  flex-direction: column;
   justify-content: start;
   align-items: center;
 `;
 
 const StyledBox = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 `;
 
 export default function BoxContainer() {
@@ -56,7 +56,7 @@ export default function BoxContainer() {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <StyledBoxContainer>
-        <Droppable droppableId={data.container.id} direction={"horizontal"}>
+        <Droppable droppableId={data.container.id}>
           {(provided) => (
             <StyledBox ref={provided.innerRef} {...provided.droppableProps}>
               {data.container.boxIds.map((box, index) => {

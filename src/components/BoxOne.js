@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Resizable } from "re-resizable";
+import { Droppable } from "react-beautiful-dnd";
+import { userData } from "./data";
 
 const Container = styled.div`
   width: ${(props) => props.containerWidth && props.width};
-  height: 550px;
-  color: lightslategray;
-  background-color: lightgoldenrodyellow;
+  height: 150px;
+  color: lightgoldenrodyellow;
+  background-color: #162043;
 `;
 
 export default function BoxOne({ containerWidth }) {
-  const [width, setWidth] = useState(250);
+  const [width, setWidth] = useState(980);
   return (
     <Resizable
       size={{ width }}
@@ -24,17 +26,15 @@ export default function BoxOne({ containerWidth }) {
         bottomLeft: false,
         topLeft: false,
       }}
-      minHeight="540px"
-      maxHeight="540px"
-      minWidth="100"
-      maxWidth="250"
+      minHeight="150px"
+      maxHeight="150px"
+      minWidth="980"
+      maxWidth="980"
       onResizeStop={(e, direction, ref, d) => {
         setWidth(width + d.width);
       }}
     >
-      <Container containerWidth={width}>
-        <h2>Box One</h2>
-      </Container>
+      <Container containerWidth={width}>users</Container>
     </Resizable>
   );
 }

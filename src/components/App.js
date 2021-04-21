@@ -3,9 +3,9 @@ import styled from "styled-components";
 import BoxContainer from "./BoxContainer";
 
 const AppContainer = styled.div`
-  width: 800px;
+  width: 1000px;
   height: 600px;
-  background-color: lightcoral;
+  background-color: #162043;
   border: 2px solid #fff;
   box-shadow: rgba(76, 76, 85, 0.2) 0px 7px 29px 0px;
   margin: 3rem auto;
